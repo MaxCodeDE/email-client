@@ -1,7 +1,23 @@
 # email-client
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an imap email client made in emberjs  which is runnig in electron.
+
+### Screenshots:
+#### Home:
+<img src="https://github.com/MaxCodeDE/email-client/blob/master/Screenshot_1.PNG" width="980" height="480" />
+
+#### Choose user:
+<img src="https://github.com/MaxCodeDE/email-client/blob/master/Screenshot_2.png" width="980" height="480" />
+
+#### Add Account:
+<img src="https://github.com/MaxCodeDE/email-client/blob/master/Screenshot_3.png" width="980" height="480" />
+
+#### Open Inbox:
+<img src="https://github.com/MaxCodeDE/email-client/blob/master/Screenshot_gif_4.gif" width="980" height="480" />
+
+#### Open EMail
+
+<img src="https://github.com/MaxCodeDE/email-client/blob/master/Screenshot_5.png" width="980" height="480" />
 
 ## Prerequisites
 
@@ -20,12 +36,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* `ember electron`
+* Electron app will open
 
 ### Running Tests
 
@@ -34,12 +46,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
+* `ember electron:test` (development)
+* `ember electron:test --serve` (development server mode)
 
 ## Further Reading / Useful Links
 
