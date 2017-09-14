@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('inbox');
+  this.route('new-account');
 });
 
 export default Router;

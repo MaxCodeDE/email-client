@@ -1,0 +1,13 @@
+<form class="md-imap-form">
+    {{mdl-textfield label='Username' value=imapUser}}
+    {{mdl-textfield label='Password' value=imapPassword}}
+    {{mdl-textfield label='Host' value=imapHost}}
+    {{mdl-textfield label='Port' type='number' value=imapPort}}
+    {{mdl-switch text='Use TLS' value=imapTls}}
+    
+    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mb-action-button" onclick={{action 'save'}}>
+      Save
+    </a>
+    
+    
+</form>

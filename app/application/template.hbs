@@ -1,0 +1,27 @@
+
+<div class="mb-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <div class="mb-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    <header class="mb-drawer-header">
+      <img src="img/logo.png" class="mb-avatar">
+        {{accounts-list store=store}}
+    </header>
+    <nav class="mb-navigation mdl-navigation mdl-color--blue-grey-800">
+      <a class="mdl-navigation__link" onclick={{action (route-action 'goTo' 'index')}}><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a> 
+      <a class="mdl-navigation__link" onclick={{action (route-action 'goTo' 'inbox')}}><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
+      <div class="mdl-layout-spacer"></div>
+    </nav>
+  </div>
+  <header class="mb-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+<div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
+    <div class="mdl-layout__header-row mb-layout-header">
+      <span class="mdl-layout-title mb-layou-title">Maxs Email Client</span>
+      <div class="mdl-layout-spacer"></div>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn" onclick={{action (route-action 'shutdownApp')}}>
+        <i class="material-icons">power_settings_new</i>
+      </button>
+    </div>
+  </header>
+  <main id="content" class="mdl-layout__content mdl-color--grey-100">
+      {{outlet}}
+  </main>
+</div>

@@ -1,0 +1,13 @@
+<div class="mb-avatar-dropdown mb-account-dropdown">
+    <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons">arrow_drop_down</i>
+    </button>
+
+    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+        {{#each imapService.accounts as |acc|}}
+            <li class="mdl-menu__item" onclick={{action (route-action 'changeAccount' acc)}}>{{acc.imapUser}}</li>
+        {{/each}}
+        <li class="mdl-menu__item" onclick={{action (route-action 'goTo' 'new-account')}}><i class="material-icons">add</i>Add new Account</li>
+    </ul>
+    <span>{{currentAccount}}</span>
+</div>

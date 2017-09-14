@@ -1,0 +1,31 @@
+<div class="mb-content">
+    
+        {{#unless showMail}}
+            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp mb-mail-table">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">State</th>
+                  <th class="mdl-data-table__cell--non-numeric">Mail</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{#each emails as |email|}}
+                    <tr class="clickable" onclick={{action 'openMail' email}}>
+                        <td class="mdl-data-table__cell--non-numeric mb-display-short-header-icon">{{email-table-seen-icon seen=email.seen}}</td>
+                        <td class="mdl-data-table__cell--non-numeric mb-display-short-header">{{email.from}}<br>{{email.header}}</td>
+                    </tr>
+                  {{/each}}
+              </tbody>
+            </table>
+        {{/unless}}
+    
+        {{#if showMail}}
+            <div class="mb-mail-body-header clickable">
+                <button class="mdl-button mdl-js-button mdl-button--icon" onclick={{action 'showMaillist'}}>
+                    <i class="material-icons">arrow_back</i>
+                </button>
+            </div>
+            <h2 class="mb-mail-body-subject"><i class="material-icons">contact_mail</i> {{mailSubject}}</h2>
+            <iframe class="mb-email-content" srcdoc={{mailText}} frameborder="0"></iframe>
+        {{/if}}
+</div>
